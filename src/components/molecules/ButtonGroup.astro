@@ -1,0 +1,25 @@
+---
+import Button from '../atoms/Button.astro'
+import { Icon } from 'astro-icon'
+---
+
+<div class="buttonGroup">
+  <Button variant='main' text='Singn In'/>
+  <Button variant='secondary' text='Demo'>
+    <Icon name="carbon:play-outline" class="buttonIcon"></Icon>
+  </Button>
+</div>
+<style>
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .buttonIcon {
+    width: 20px;
+  }
+</style>

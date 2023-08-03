@@ -1,0 +1,39 @@
+---
+interface Props {
+  variant: string;
+  text: string;
+}
+
+const { variant, text } = Astro.props;
+---
+
+<button class=`button button--${variant}`>
+  <slot />
+  {text}
+</button>
+<style>
+  .button {
+    all: unset;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px 12px 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .button--main {
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  .button--secondary {
+    color: black;
+    background-color: white;
+    border: 1px solid #D0D5DD;
+  }
+</style>

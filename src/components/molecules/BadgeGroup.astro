@@ -1,0 +1,39 @@
+---
+import Badge from '../atoms/Badge.astro';
+import { Icon } from 'astro-icon'
+---
+
+<div class="badgeGroup">
+  <Badge text="New features"/>
+  <div class="badgeIconContainer">
+    <span>Check out the team dashboard</span>
+    <Icon name="carbon:arrow-right" class="badgeIcon"/>
+  </div>
+</div>
+<style>
+  .badgeGroup {
+    display: flex;
+    font-size:12px;
+    height:1.2rem;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--tertiary-color);
+    border-radius: 16px;
+    padding: 4px 10px 4px 4px;
+    width: 307px;
+    gap: 8px;
+  }
+
+  .badgeIcon {
+    color: var(--main-color);
+    width: 12px;
+  }
+
+  .badgeIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 4px;
+    color: var(--main-color);
+  }
+</style>

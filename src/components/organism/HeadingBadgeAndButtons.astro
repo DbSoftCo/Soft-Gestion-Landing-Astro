@@ -1,0 +1,28 @@
+---
+import BadgeGroup from '../molecules/BadgeGroup.astro'
+import ButtonGroup from '../molecules/ButtonGroup.astro'
+
+
+interface Props {
+  headerText: string;
+  text: string;
+}
+
+const { headerText, text } = Astro.props
+---
+
+<div>
+  <BadgeGroup />
+  <h2>{headerText}</h2>
+  <p>{text}</p>
+  <ButtonGroup />
+</div>
+<style>
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    gap: 16px;
+  }
+</style>
