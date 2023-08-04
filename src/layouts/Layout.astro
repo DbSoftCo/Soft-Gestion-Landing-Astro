@@ -25,23 +25,61 @@ const { title } = Astro.props;
 		--main-color: #3EA2D0;
   	--secondary-color: #99F1FB;
   	--tertiary-color: #DDFEFD;
-	}
-	html {
-		font-family: Inter, sans-serif;
+
+		--h2-size: 36px;
+		--h3-size: 30px;
+		--h4-size: 18px;
+		--h5-size: 14px;
+
+		--p-size: 18px;
+		--p-color: #667085;
 	}
 
-	h2 {
-		font-weight: bold;
-		font-size: 36px;
-		line-height: 44px;
+	* {
 		text-align: center;
 		margin: 0;
+	}
+
+	html {
+		font-family: Inter, sans-serif;
 	}
 
 	p {
 		font-size: 18px;
 		line-height: 28px;
 		text-align: center;
-		color: #667085;
+	}
+
+	h2 {
+		font-size: var(--h2-size);
+		font-weight: bold;
+		line-height: 44px;
+		margin: 0;
+		height: auto;
+	}
+
+	h3 {
+		font-size: var(--h3-size);
+		font-weight: bold;
+		line-height: 38px;
+	}
+
+	h4 {
+		font-size: var(--h4-size);
+		font-weight: bold;
+		line-height: 28px;
+	}
+
+	h5 {
+		font-size: var(--h5-size);
+		font-weight: bold;
+		color: var(--main-color);
+		line-height: 20px;
+	}
+
+	p {
+		font-size: var(--p-size);
+		color: var(--p-color);
+		line-height: 28px;
 	}
 </style>

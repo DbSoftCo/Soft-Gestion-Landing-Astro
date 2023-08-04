@@ -1,12 +1,12 @@
 ---
 import Button from '../atoms/Button.astro'
-import { Icon } from 'astro-icon'
+import Icons from '../atoms/Icons.astro';
 ---
 
 <div class="buttonGroup">
   <Button variant='main' text='Singn In'/>
   <Button variant='secondary' text='Demo'>
-    <Icon name="carbon:play-outline" class="buttonIcon"></Icon>
+    <Icons iconName="carbon:play-outline"/>
   </Button>
 </div>
 <style>
@@ -17,9 +17,5 @@ import { Icon } from 'astro-icon'
     justify-content: space-between;
     gap: 1.5rem;
     width: 100%;
-  }
-
-  .buttonIcon {
-    width: 20px;
   }
 </style>

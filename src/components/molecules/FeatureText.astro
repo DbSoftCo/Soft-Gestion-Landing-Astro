@@ -1,0 +1,27 @@
+---
+import Icons from '../atoms/Icons.astro';
+interface Props {
+  iconName: string;
+  featureTitle: string;
+  featureDescription: string;
+}
+
+const {iconName, featureTitle, featureDescription} = Astro.props;
+---
+
+<div class="featureText">
+  <div class="iconContainer">
+    <Icons iconName={iconName} variant="feature"/>
+  </div>
+  <h4>{featureTitle}</h4>
+  <p>{featureDescription}</p>
+  <slot />
+</div>
+<style>
+  .featureText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+</style>

@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeadingBadgeAndButtons from '../components/organism/HeadingBadgeAndButtons.astro';
+import SectionHeader from '../components/molecules/SectionHeader.astro';
+import FeatureText from '../components/molecules/FeatureText.astro';
 ---
 
 <Layout title="DbSoft Co">
@@ -9,9 +11,15 @@ import HeadingBadgeAndButtons from '../components/organism/HeadingBadgeAndButton
 			headerText="Beautiful analytics to grow smarter" 
 			text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups." 
 		/>
+		<SectionHeader 
+			heading="Analytics that feels like it’s from the future"
+			subheading="Features"
+			text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups."
+		/>
+		<FeatureText 
+			iconName='carbon:play-outline'
+			featureTitle='Share team inboxes'
+			featureDescription='Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.'
+		/>
 	</main>
 </Layout>
-
-<style>
-	
-</style>
