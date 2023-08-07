@@ -1,0 +1,42 @@
+---
+import FeatureCard from "../molecules/FeatureCard.astro";
+import SectionHeader from "../molecules/SectionHeader.astro";
+import { featuresData } from "./featuresData";
+---
+
+<div class="featureSection">
+  <div class="featureTitle">
+    <SectionHeader
+			heading="Analytics that feels like it’s from the future"
+			subheading="Features"
+			text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups."
+		/>
+  </div>
+  <div class="featuresContainer">
+    { featuresData.map((data) => {
+        return <FeatureCard 
+          iconName={data.iconName}
+          featureTitle={data.featureTitle}
+          text={data.text}
+        />
+      })
+    }
+  </div>
+</div>
+<style>
+  .featureSection {
+    padding: 64px 0px 64px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .featuresContainer {
+    padding: 0px 16px 0px 16px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+</style>

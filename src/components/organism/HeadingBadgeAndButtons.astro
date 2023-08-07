@@ -16,6 +16,9 @@ const { headerText, text } = Astro.props
   <h2>{headerText}</h2>
   <p>{text}</p>
   <ButtonGroup />
+  <div class="imageContainer">
+    <img src="./macbook.svg" alt="macbook 16 image">
+  </div>
 </div>
 <style>
   div{
@@ -24,5 +27,6 @@ const { headerText, text } = Astro.props
     align-items:center;
     justify-content:center;
     gap: 16px;
+    padding: 64px 16px 64px 16px;
   }
 </style>
