@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeadingBadgeAndButtons from '../components/organism/HeadingBadgeAndButtons.astro';
-import SectionHeader from '../components/molecules/SectionHeader.astro';
 import Features from '../components/organism/Features.astro';
+import FeaturesTwo from '../components/organism/FeaturesTwo.astro';
+import { FrequentlyAsks } from "../components/organism/FrequentlyAsks"
 ---
 
 <Layout title="DbSoft Co">
@@ -12,5 +13,9 @@ import Features from '../components/organism/Features.astro';
 			text="Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups." 
 		/>
 		<Features />
+		<FeaturesTwo />
+		<div>
+			<FrequentlyAsks client:load/>
+		</div>
 	</main>
-</Layout>
+</Layout>../components/organism/FrequentlyAsks.tsx

@@ -1,4 +1,5 @@
 ---
+import SectionsContainer from '../atoms/SectionsContainer.astro';
 import BadgeGroup from '../molecules/BadgeGroup.astro'
 import ButtonGroup from '../molecules/ButtonGroup.astro'
 
@@ -11,7 +12,7 @@ interface Props {
 const { headerText, text } = Astro.props
 ---
 
-<div>
+<SectionsContainer>
   <BadgeGroup />
   <h2>{headerText}</h2>
   <p>{text}</p>
@@ -19,14 +20,4 @@ const { headerText, text } = Astro.props
   <div class="imageContainer">
     <img src="./macbook.svg" alt="macbook 16 image">
   </div>
-</div>
-<style>
-  div{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:center;
-    gap: 16px;
-    padding: 64px 16px 64px 16px;
-  }
-</style>
+</SectionsContainer>
