@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import "./Accordeon.css"
 
 interface AcordeonProps {
   title: string;
@@ -14,11 +15,11 @@ const AccordeonElements = ({ text, title }: AcordeonProps) => {
   }
 
   return (
-    <div className="accordeonElement">
-      <div className="accordeonElement" onClick={handleClick}>
+    <div className="accordeonItemContainer">
+      <div className="accordeonTitle" onClick={handleClick}>
         <h4>{title}</h4>
         {
-          visible === 'invisible' ? <img src="./plus.svg"/> : <img src="./substract.svg"/>
+          visible === 'invisible' ? <img src="./plus.svg" className="iconAccordeon"/> : <img src="./substract.svg" className="iconAccordeon"/>
         }
       </div>
       <div className={`accordeonItem ${visible}`}>
