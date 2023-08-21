@@ -1,9 +1,23 @@
 ---
+import SectionsContainer from "../atoms/SectionsContainer.astro";
 import FeatureCard from "../molecules/FeatureCard.astro";
+import SectionHeader from "../molecules/SectionHeader.astro";
 import { featuresData1 } from "./featuresData";
 ---
-<FeatureCard 
-iconName={featuresData1[0].iconName}
-featureTitle={featuresData1[0].featureTitle}
-text={featuresData1[0].text}
-/>
+
+<SectionsContainer>
+  <div class="featureTitle">
+    <SectionHeader
+			heading="Potencia tu proyecto con la innovación total de nuestro sistema"
+			subheading="Que ofrecemos?"
+			text="Te ayudamos a mantener la gestion total de tu empresa, desde la gestion de proyectos, hasta todo lo relacionado con la administracion de RRHH, controlalos gastos de tu empresa y factura de manera segura!"
+		/>
+  </div>
+  {featuresData1.map((data) => {
+    return <FeatureCard 
+      text={data.text}
+      iconName={data.iconName}
+      featureTitle={data.featureTitle}
+    />
+    })}
+</SectionsContainer>
