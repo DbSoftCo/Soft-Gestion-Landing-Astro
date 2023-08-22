@@ -29,7 +29,14 @@ h4 {
   display: flex;
   width: 100%;
   flex-direction: row;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .accordeonItemContainer {
+    width: 70vw;
+  }
 }

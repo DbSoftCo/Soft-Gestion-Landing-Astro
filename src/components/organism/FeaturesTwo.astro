@@ -37,6 +37,26 @@ import { featuresData2 } from "./featuresData";
   .featuresContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
   }
 </style>

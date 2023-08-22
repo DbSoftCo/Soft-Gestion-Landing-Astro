@@ -12,16 +12,46 @@ const { featureTitle, iconName, text } = Astro.props
 
 <div class="featureCard">
   <Icons iconName={iconName} variant='feature'/>
-  <h4>{featureTitle}</h4>
-  <p>{text}</p>
+  <div class="textContent">
+    <h4>{featureTitle}</h4>
+    <p>{text}</p>
+  </div>
 </div>
 <style>
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
   .featureCard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .featureCard {
+      gap: 32px;
+    }
+
+    .textContent {
+      width: 450px;
+      gap: 12px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .featureCard {
+      width: 400px;
+    }
+
+    .textContent {
+      width: 400px;
+      gap: 12px;
+    }
   }
 </style>
 

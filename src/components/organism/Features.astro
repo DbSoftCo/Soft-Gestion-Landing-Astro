@@ -13,11 +13,44 @@ import { featuresData1 } from "./featuresData";
 			text="Te ayudamos a mantener la gestion total de tu empresa, desde la gestion de proyectos, hasta todo lo relacionado con la administracion de RRHH, controlalos gastos de tu empresa y factura de manera segura!"
 		/>
   </div>
-  {featuresData1.map((data) => {
-    return <FeatureCard 
-      text={data.text}
-      iconName={data.iconName}
-      featureTitle={data.featureTitle}
-    />
+  <div class="featuresContainer">
+    {featuresData1.map((data) => {
+      return <FeatureCard 
+        text={data.text}
+        iconName={data.iconName}
+        featureTitle={data.featureTitle}
+      />
     })}
+  </div>
 </SectionsContainer>
+<style>
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .featureTitle {
+      width: 65vw;
+    }
+  }
+</style>

@@ -39,10 +39,26 @@ const { title } = Astro.props;
 		--h3-size: 30px;
 		--h4-size: 20px;
 		--h5-size: 14px;
+		--p-size: 12px;
 
-		--p-size: 16px;
 		--p-color: #667085;
 		--title-color: #101828;
+
+		@media (min-width: 768px) {
+			--h2-size: 42px;
+			--h3-size: 36px;
+			--h4-size: 26px;
+			--h5-size: 20px;
+			--p-size: 16px;
+		}
+
+		@media (min-width: 1200px) {
+			--h2-size: 60px;
+			--h3-size: 36px;
+			--h4-size: 26px;
+			--h5-size: 20px;
+			--p-size: 16px;
+		}
 	}
 
 	* {
