@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Props {
+  iconName: string;
+  variant: string;
+}
+
+const { iconName, variant } = Astro.props
+
+const className = `icon icon--${variant}`;
+---
+
+<Icon name={iconName} class={className}></Icon>
+<style>
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon--demo {
+    color: black;
+  }
+
+  .icon--feature {
+    color: var(--main-color);
+    padding: 10 px;
+    background-color: var(--tertiary-color);
+    border-radius: 28px;
+  }
+
+  .icon--navBar {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    .icon--navBar {
+      display: none;
+    }
+  }
+</style>
+
+

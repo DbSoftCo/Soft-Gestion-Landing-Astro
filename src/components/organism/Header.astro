@@ -1,0 +1,35 @@
+---
+import Icons from "../atoms/Icons.astro";
+import BrandIcons from "../molecules/BrandIcons.astro";
+
+---
+
+<div class="header">
+  <BrandIcons />
+  <Icons iconName="carbon:menu" variant="navBar"/>
+</div>
+<style>
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 12px 0px 16px;
+    width: 100%;
+    box-shadow: -2px -7px 36px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -7px 36px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -7px 36px 0px rgba(0,0,0,0.75);
+  }
+
+  @media (min-width: 1200px) {
+    .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6.5rem;
+    justify-content: space-between;
+    padding: 0px 64px 0px 64px;
+    background-color: white;
+    }
+  }
+</style>

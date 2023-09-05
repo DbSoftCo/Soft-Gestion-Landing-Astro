@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import SectionsContainer from "../atoms/SectionsContainer.astro";
+import FeatureCard from "../molecules/FeatureCard.astro";
+import SectionHeader from "../molecules/SectionHeader.astro";
+import { featuresData2 } from "./featuresData";
+import iPhoneMockup from "@assets/iphone.svg";
+import ScreenMockuo from "@assets/screenMock.svg";
+---
+<SectionsContainer>
+  <div class="featureTitle">
+    <SectionHeader
+			heading="Funciones de vanguardia para el analisis de tus proyectos."
+			subheading="Caracteristicas"
+			text="El analisis de tus proyectos a solo unos clicks, no esperes mas y solicita tu demo, te guiamos en todo el proceso."
+		/>
+  </div>
+  <div class="imgContainer">
+    <Image src={iPhoneMockup} alt="iphone with dashbord img" class="mobile"/>
+    <Image src={ScreenMockuo} alt="dashboard desktop" class="desktop"/>
+  </div>
+  <div class="featuresContainer">
+    { featuresData2.map((data) => {
+        return <FeatureCard
+          iconName={data.iconName}
+          featureTitle={data.featureTitle}
+          text={data.text}
+        />
+      })
+    }
+  </div>
+</SectionsContainer>
+<style>
+  .desktop {
+    display: none;
+  }
+
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 80px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    .featuresContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+  }
+</style>

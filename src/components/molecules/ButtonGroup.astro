@@ -1,12 +1,12 @@
 ---
 import Button from '../atoms/Button.astro'
-import { Icon } from 'astro-icon'
+import Icons from '../atoms/Icons.astro';
 ---
 
 <div class="buttonGroup">
-  <Button variant='main' text='Singn In'/>
+  <Button variant='main' text='Organizar encuentro'/>
   <Button variant='secondary' text='Demo'>
-    <Icon name="carbon:play-outline" class="buttonIcon"></Icon>
+    <Icons iconName="carbon:play-outline" variant="demo"/>
   </Button>
 </div>
 <style>
@@ -19,7 +19,11 @@ import { Icon } from 'astro-icon'
     width: 100%;
   }
 
-  .buttonIcon {
-    width: 20px;
+  @media (min-width: 1200px) {
+    .buttonGroup {
+      flex-direction: row-reverse;
+      justify-content: center;
+      gap: 12px;
+    }
   }
 </style>

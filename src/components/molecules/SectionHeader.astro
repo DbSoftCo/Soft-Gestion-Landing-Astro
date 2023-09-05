@@ -1,0 +1,30 @@
+---
+interface Props {
+  heading: string;
+  subheading: string;
+  text: string;
+}
+
+const { heading, subheading, text } = Astro.props;
+---
+
+<div class="sectionHeaderContainer">
+  <h5>{subheading}</h5>
+  <h3>{heading}</h3>
+  <p>{text}</p>
+</div>
+<style>
+  .sectionHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  @media (min-width: 1200px) {
+    p {
+      width: 50vw;
+    }
+  }
+</style>

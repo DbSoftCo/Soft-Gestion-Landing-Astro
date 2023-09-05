@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+import BrandIcon from "@assets/logoIcon.svg";
+---
+
+<div class="brandIcons">
+  <Image src={BrandIcon} alt="DbSoft brand icon" class="brandImg"/>
+</div>
+<style>
+  @media (min-width: 1200px) {
+    .brandImg {
+      object-fit: contain;
+      width: 100px;
+      height: 100px
+    }
+  }
+</style>

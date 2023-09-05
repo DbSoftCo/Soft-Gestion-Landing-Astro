@@ -1,0 +1,42 @@
+.accordeonItemContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 8px;
+}
+
+h4 {
+  text-align: start;
+}
+
+.iconAccordeon {
+  border: 2px solid #7F56D9;
+  color: #7F56D9;
+  border-radius: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.accordeonItem p {
+  text-align: start;
+}
+
+.invisible {
+  display: none;
+}
+
+.accordeonTitle {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .accordeonItemContainer {
+    width: 70vw;
+  }
+}
