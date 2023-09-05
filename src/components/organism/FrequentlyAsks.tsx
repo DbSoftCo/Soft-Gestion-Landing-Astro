@@ -11,8 +11,8 @@ export const FrequentlyAsks = () => {
     <div className="sectionContainer">
       <div className="contentContainer">
         <div className="header">
-          <h3>Frequently asked questions</h3>
-          <p>Everything you need to know about the product and billing.</p>
+          <h3>Preguntas frecuentes</h3>
+          <p>Todo lo que necesitas saber sobre nuestros productos.</p>
         </div>
         <div className="accordeon">
           {

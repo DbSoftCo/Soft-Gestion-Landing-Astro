@@ -1,19 +1,23 @@
 ---
+import { Image } from "astro:assets";
 import SectionsContainer from "../atoms/SectionsContainer.astro";
 import FeatureCard from "../molecules/FeatureCard.astro";
 import SectionHeader from "../molecules/SectionHeader.astro";
 import { featuresData2 } from "./featuresData";
+import iPhoneMockup from "@assets/iphone.svg";
+import ScreenMockuo from "@assets/screenMock.svg";
 ---
 <SectionsContainer>
   <div class="featureTitle">
     <SectionHeader
-			heading="Potencia tu proyecto con la innovación total de nuestro sistema"
-			subheading="Que ofrecemos?"
-			text="Te ayudamos a mantener la gestion total de tu empresa, desde la gestion de proyectos, hasta todo lo relacionado con la administracion de RRHH, controlalos gastos de tu empresa y factura de manera segura!"
+			heading="Funciones de vanguardia para el analisis de tus proyectos."
+			subheading="Caracteristicas"
+			text="El analisis de tus proyectos a solo unos clicks, no esperes mas y solicita tu demo, te guiamos en todo el proceso."
 		/>
   </div>
   <div class="imgContainer">
-    <img src="./iphone.svg" alt="iphone">
+    <Image src={iPhoneMockup} alt="iphone with dashbord img" class="mobile"/>
+    <Image src={ScreenMockuo} alt="dashboard desktop" class="desktop"/>
   </div>
   <div class="featuresContainer">
     { featuresData2.map((data) => {
@@ -27,6 +31,10 @@ import { featuresData2 } from "./featuresData";
   </div>
 </SectionsContainer>
 <style>
+  .desktop {
+    display: none;
+  }
+
   .imgContainer {
     display: flex;
     justify-content: center;
@@ -51,6 +59,14 @@ import { featuresData2 } from "./featuresData";
   }
 
   @media (min-width: 1200px) {
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
     .featuresContainer {
       display: flex;
       flex-direction: row;

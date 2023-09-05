@@ -44,18 +44,18 @@ export const featuresData1: IFeatureData[] = [
 
 export const featuresData2: IFeatureData[] = [
   {
-    iconName: "carbon:chart-cluster-bar",
-    featureTitle: "Deliver instant answers",
-    text: "An all-in-one customer service platform that helps you balance everything your customers need to be happy."
+    iconName: "carbon:face-satisfied",
+    featureTitle: "Envia reportes a tus clientes",
+    text: "Con nuestro modulo de obras vas a poder comunicarle al cliente en todo momento en que estado se encuentra su proyecto."
   },
   {
     iconName: "carbon:lightning",
-    featureTitle: "Manage your team with reports",
-    text: "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+    featureTitle: "Factura desde un solo lugar",
+    text: "Opta por nuestro sistema de facturación para una experiencia más rápida, sencilla y segura en comparación con las páginas gubernamentales. Simplifica tu proceso de facturación y ahorra tiempo con nosotros."
   },
   {
-    iconName: "carbon:face-satisfied",
-    featureTitle: "Connect with customers",
-    text: "Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion."
+    iconName: "carbon:chart-cluster-bar",
+    featureTitle: "Control de gastos",
+    text: "Nuestro módulo de cuentas corrientes simplifica la gestión financiera al proporcionarte un registro detallado de tus transacciones y saldos en un solo lugar, garantizando un control efectivo de tus cuentas y gastos."
   },
 ]

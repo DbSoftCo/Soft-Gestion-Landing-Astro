@@ -1,7 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import SectionsContainer from '../atoms/SectionsContainer.astro';
-import BadgeGroup from '../molecules/BadgeGroup.astro'
 import ButtonGroup from '../molecules/ButtonGroup.astro'
+import MacBook from "@assets/macbook.svg"
 
 
 interface Props {
@@ -13,12 +14,11 @@ const { headerText, text } = Astro.props
 ---
 
 <SectionsContainer>
-  <BadgeGroup />
   <h2>{headerText}</h2>
   <p>{text}</p>
   <ButtonGroup />
   <div class="imageContainer">
-    <img src="./macbook.svg" class="macbook" alt="macbook 16 image">
+    <Image src={MacBook} alt="mackbook with dashboard" class="macbook"/>
   </div>
 </SectionsContainer>
 <style>
