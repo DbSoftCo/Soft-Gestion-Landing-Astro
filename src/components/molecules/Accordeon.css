@@ -21,8 +21,18 @@ h4 {
   text-align: start;
 }
 
+.accordeonItem {
+  opacity: 1;
+  max-height: 500px; /* Un valor máximo para la altura que sea mayor que el contenido real */
+  overflow: hidden;
+  transition: opacity 0.5s ease-in, max-height 0.5s ease-in;
+}
+
 .invisible {
-  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in, max-height 0.5s ease-in;
 }
 
 .accordeonTitle {
