@@ -1,0 +1,41 @@
+---
+interface Props {
+  inputName: string;
+  placeholder: string;
+}
+
+const { inputName, placeholder } = Astro.props;
+---
+<div>
+  <label for={inputName}>{inputName}</label>
+  <textarea placeholder={placeholder} name={inputName} rows="5"/>
+</div>
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.2rem;
+  }
+
+  textarea {
+    text-wrap: wrap;
+    overflow: hidden;
+    font-size: 14px;
+    border: 1px solid #D2D6DA;
+    border-radius: 8px;
+    resize: none;
+    text-align: start;
+    padding-left: 10px;
+    width: 100%;
+    min-height: 30px; /* Establece una altura mínima */
+    font-weight: 400;
+    line-height: 1.5; /* Alineado con la altura del contenido */
+    transition: border-color 0.2s ease-in; /* Aplicar transición solo a border-color */
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import Input from "@components/atoms/Input.astro";
+---
+
+<div class="inputGroup">
+  <Input inputName="Nombre" placeholder="Nombre" type="text"/>
+  <Input inputName="Apellido" placeholder="Apellido" type="text"/>
+</div>
+<style>
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 1200px) {
+    .inputGroup {
+      flex-direction: row;
+    }
+  }
+</style>

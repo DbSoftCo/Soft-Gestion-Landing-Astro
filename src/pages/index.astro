@@ -4,6 +4,7 @@ import HeadingBadgeAndButtons from '../components/organism/HeadingBadgeAndButton
 import Features from '../components/organism/Features.astro';
 import FeaturesTwo from '../components/organism/FeaturesTwo.astro';
 import { FrequentlyAsks } from "../components/organism/FrequentlyAsks"
+import ContactForm from '@components/organism/ContactForm.astro';
 ---
 
 <Layout title="DbSoft Co">
@@ -17,5 +18,6 @@ import { FrequentlyAsks } from "../components/organism/FrequentlyAsks"
 		<div>
 			<FrequentlyAsks client:load/>
 		</div>
+		<ContactForm/>
 	</main>
 </Layout>
