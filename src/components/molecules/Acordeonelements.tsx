@@ -19,7 +19,7 @@ const AccordeonElements = ({ text, title }: AcordeonProps) => {
       <div className="accordeonTitle" onClick={handleClick}>
         <h4>{title}</h4>
         {
-          visible === 'invisible' ? <img src="./plus.svg" className="iconAccordeon"/> : <img src="./substract.svg" className="iconAccordeon"/>
+          visible === 'invisible' ? <img src="./plus.svg" alt="open accordeon element" className="iconAccordeon"/> : <img src="./substract.svg" alt="close accordeon element" className="iconAccordeon"/>
         }
       </div>
       <div className={`accordeonItem ${visible}`}>

@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<meta http-equiv="Content-Language" content="es"/>
 		<meta name=”distribution” content=”global”/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" id="favicon"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -33,6 +33,19 @@ const { title } = Astro.props;
 		<FooterBrand />
 	</footer>
 </html>
+<script>
+	document.addEventListener('visibilitychange', function() {
+		if (document.visibilityState === 'visible') {
+			// Cambiar el enlace al favicon deseado cuando la pestaña está activa
+			const favicon = document.getElementById('favicon') as HTMLLinkElement;
+			favicon.href = '/favicon-white.svg';
+		} else {
+			// Restaurar el enlace al favicon original cuando la pestaña está inactiva
+			const favicon = document.getElementById('favicon') as HTMLLinkElement;
+			favicon.href = '/favicon-black.svg';
+		}
+	});
+</script>
 <style is:global>
 	:root {
 		--main-color: #7F56D9;
@@ -64,6 +77,11 @@ const { title } = Astro.props;
 			--p-size: 16px;
 		}
 	}
+
+	link[rel="icon"] {
+    width: 64px !important; /* Cambia el valor a tu tamaño deseado */
+    height: 64px !important; /* Cambia el valor a tu tamaño deseado */
+  }
 
 	* {
 		text-align: center;
@@ -148,3 +166,5 @@ const { title } = Astro.props;
   border-radius: 6px; /* Bordes redondeados del pulgar */
 }
 </style>
+
+
