@@ -13,7 +13,7 @@ export const featuresData1: IFeatureData[] = [
   {
     iconName: "carbon:lightning",
     featureTitle: "Gestion del personal de obra",
-    text: "An all-in-one customer service platform that helps you balance everything your customers need to be happy."
+    text: "Supervisa la ubicación en tiempo real de tu personal de obra y administra tareas de manera eficiente con nuestro módulo de gestión de personal en obra, simplificando la coordinación y aumentando la productividad.."
   },
   {
     iconName: "carbon:face-satisfied",
@@ -23,22 +23,22 @@ export const featuresData1: IFeatureData[] = [
   {
     iconName: "carbon:concept",
     featureTitle: "Modulo de RRHH",
-    text: "Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion."
+    text: "Nuestro módulo de Recursos Humanos revoluciona la gestión de personal en tu empresa. Automatiza tareas, simplifica procesos y mejora la productividad de tu equipo. Con herramientas intuitivas y cumplimiento normativo, optimiza la gestión de RRHH y potencia el crecimiento de tu negocio. ¡Transforma tu empresa con nuestra solución de RRHH!"
   },
   {
     iconName: "carbon:chat",
     featureTitle: "Modulo de cuentas corrientes",
-    text: "Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools."
+    text: "Nuestro módulo de cuentas corrientes es la solución perfecta para simplificar y optimizar la gestión de tus cuentas y transacciones. Con funciones intuitivas y una interfaz fácil de usar, podrás llevar un control preciso de tus registros financieros, agilizar el proceso de facturación y mantener un seguimiento eficiente de los saldos."
   },
   {
     iconName: "carbon:chat",
     featureTitle: "Facturacion electronica",
-    text: "We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help."
+    text: "Simplifica tu facturación y cumple con los requisitos legales utilizando nuestro módulo de facturación electrónica. Agiliza tus procesos financieros, reduce errores y costos, y mantente al día con las normativas fiscales. ¡Optimiza tu negocio hoy mismo!"
   },
   {
     iconName: "carbon:chat",
     featureTitle: "Stock e inventario",
-    text: "Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks."
+    text: "Gestiona tu inventario con facilidad. Nuestro módulo de stock e inventario supervisa en tiempo real y genera órdenes de compra automáticamente cuando el stock es bajo. Simplifica tu gestión de inventario con nosotros."
   },
 ]
 
