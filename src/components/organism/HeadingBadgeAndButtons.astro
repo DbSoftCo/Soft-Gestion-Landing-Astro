@@ -38,7 +38,19 @@ const { headerText, text } = Astro.props
     gap: 48px;
     overflow: hidden;
   }
-  
+
+  .macbook {
+    width: 343px;
+    height: 200px;
+  }
+
+  @media (min-width: 750px) {
+    .macbook {
+      width: 100%;
+      height: 250px;
+    }
+  }
+
   @media (min-width: 1200px) {
     .macbook {
       width: 70vw;
