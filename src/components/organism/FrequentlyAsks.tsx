@@ -3,8 +3,8 @@ import { accordeonData, IaccordeonData } from "./accordeonInfo"
 import "./FrequentlyAsks.css";
 
 export const FrequentlyAsks = () => {
-  const generateAccordeonElements = (data: IaccordeonData) => {
-    return <AccordeonElements text={data.text} title={data.title} />
+  const generateAccordeonElements = (data: IaccordeonData, index: number) => {
+    return <AccordeonElements text={data.text} title={data.title} key={index} />
   };
 
   return (
@@ -16,7 +16,7 @@ export const FrequentlyAsks = () => {
         </div>
         <div className="accordeon">
           {
-            accordeonData.map(generateAccordeonElements)
+            accordeonData.map((data, index) => generateAccordeonElements(data, index))
           }
         </div>
       </div>

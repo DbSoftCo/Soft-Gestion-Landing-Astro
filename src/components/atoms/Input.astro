@@ -11,7 +11,7 @@ const { type, inputName, placeholder } = Astro.props;
 ---
 <div class="inputContainer">
   <label for={inputName}>{inputName}</label>
-  <input type={type} name={inputName} id={inputName} placeholder={placeholder}/>
+  <input type={type} name={inputName} id={inputName} placeholder={placeholder} id={inputName}/>
 </div>
 <style>
   .inputContainer {
@@ -38,6 +38,10 @@ const { type, inputName, placeholder } = Astro.props;
 
   input:focus {
     border-color: var(--main-color); /* Cambiar el color del borde en focus */
+  }
+
+  .error {
+    border-color: red;
   }
 
   @media (min-width: 1200px) {

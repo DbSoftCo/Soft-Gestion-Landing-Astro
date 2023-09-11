@@ -18,9 +18,12 @@
     "astro": "^3.0.8",
     "astro-icon": "^0.8.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "sweetalert2": "^11.7.27",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
+    "@types/validator": "^13.11.1",
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "^8.46.0",
     "eslint-plugin-astro": "^0.28.0"
