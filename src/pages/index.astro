@@ -4,7 +4,7 @@ import HeadingBadgeAndButtons from '../components/organism/HeadingBadgeAndButton
 import Features from '../components/organism/Features.astro';
 import FeaturesTwo from '../components/organism/FeaturesTwo.astro';
 import { FrequentlyAsks } from "../components/organism/FrequentlyAsks"
-import ContactForm from '@components/organism/ContactForm.astro';
+import { ContactForm } from '@components/organism/ContactForm';
 ---
 
 <Layout title="DbSoft Co">
@@ -18,6 +18,6 @@ import ContactForm from '@components/organism/ContactForm.astro';
 		<div>
 			<FrequentlyAsks client:visible/>
 		</div>
-		<ContactForm/>
+		<ContactForm client:visible/>
 	</main>
 </Layout>
