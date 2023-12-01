@@ -13,8 +13,8 @@ const { featureTitle, iconName, text } = Astro.props
 <div class="featureCard">
   <Icons iconName={iconName} variant='feature'/>
   <div class="textContent">
-    <h4>{featureTitle}</h4>
-    <p>{text}</p>
+    <h4 class="font-medium text-sm">{featureTitle}</h4>
+    <p class="font-normal text-xs text-[#667085]">{text}</p>
   </div>
 </div>
 <style>
@@ -29,7 +29,7 @@ const { featureTitle, iconName, text } = Astro.props
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
   }
 
   @media (min-width: 768px) {

@@ -8,16 +8,19 @@ import { ContactForm } from '@components/organism/ContactForm';
 ---
 
 <Layout title="DbSoft Co">
-	<main>
-		<HeadingBadgeAndButtons 
-			headerText="Elevando la construcción con la innovación de DbSoft Co: Tu éxito, nuestro software." 
-			text="Optimiza tus proyectos con nuestra solución de gestión para constructoras. Simplifica la administración, mejora la eficiencia y garantiza el éxito en cada obra. Confía en nosotros para llevar tu empresa al siguiente nivel." 
-		/>
-		<Features />
-		<FeaturesTwo />
-		<div>
-			<FrequentlyAsks client:visible/>
-		</div>
-		<ContactForm client:visible/>
-	</main>
+	<main class="w-full flex flex-col items-center">
+		<div class="w-2/3 mt-16">
+			<HeadingBadgeAndButtons 
+				headerText="Elevando la construcción con la innovación de DbSoft Co: Tu éxito, nuestro software." 
+				text="Optimiza tus proyectos con nuestra solución de gestión para constructoras. Simplifica la administración, mejora la eficiencia y garantiza el éxito en cada obra. Confía en nosotros para llevar tu empresa al siguiente nivel." 
+			/>
+			<Features />
+			<FeaturesTwo />
+			<div>
+				<FrequentlyAsks client:visible/>
+			</div>
+			<ContactForm client:visible/>
+		</main>
+	</div>
+
 </Layout>

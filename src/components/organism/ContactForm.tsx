@@ -1,6 +1,12 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { FormInput } from "@components/atoms/FormInput";
+import { FormTextArea } from "@components/atoms/FormTextArea";
+import axios from "axios";
+import { CSSProperties, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+import swal from 'sweetalert';
 
 interface IFormInput {
   name: string;
@@ -8,6 +14,10 @@ interface IFormInput {
   email: string;
   message: string;
 }
+
+const override: CSSProperties = {
+  padding: "1rem"
+};
 
 const schema = yup
   .object({
@@ -19,46 +29,86 @@ const schema = yup
   .required()
 
 export const ContactForm = () => {
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyd4ZvQSc7X3nptV-9y1UChb7gHa1fckMRKXB-c8IZzpG-ZQmLCtihcheTJTD2wg-WP1Q/exec";
+
   const {
     register,
     handleSubmit,
-    watch,
+    getValues,
     formState: { errors },
   } = useForm<IFormInput>({
     resolver: yupResolver(schema),
   })
 
+  const [itsLoading, setLoading] = useState(false)
+  const [itsDisambled, setDisambled] = useState(false)
+
+
   const onSubmit: SubmitHandler<IFormInput> = (data, e) => {
     e?.preventDefault()
+
+    setLoading(true)
+
+    axios.post(scriptURL, getValues())
+      .then(() => {
+        swal({
+          title: `Gracias ${getValues().name}`,
+          text: "Pronto nos comunicaremos con usted",
+          icon: "success",
+        });
+      })
+      .catch(() => {
+        swal({
+          title: "Hubo un problema",
+          text: "Intenta nuevamente en otro momento",
+          icon: "error",
+        });
+      })
+      .finally(() => {
+        setLoading(false)
+        setDisambled(true);
+      })
   }
 
   return (
-    <div>
-      <span>Contactanos</span>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="name">
-            Nombre
-            <input type="text" {...register("name", { required: true })} id="name" />
-            <p>{errors.name?.message}</p>
-          </label>
-          <label htmlFor="lastName">
-            Apellido
-            <input type="text" {...register("lastName", { required: true })} id="lastName" />
-            <p>{errors.lastName?.message}</p>
-          </label>
+    <div className="w-full flex justify-center items-center font-bold my-10">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-[672px]">
+        <span className="text-[#7F56D9] text-3xl">Contactanos</span>
+        <div className="w-full flex flex-col gap-4 mt-4 md:flex-row">
+          <FormInput 
+            required={true}
+            label="Nombre"
+            name="name"
+            errors={errors}
+            register={register}
+          />
+          <FormInput 
+            required={true}
+            label="Apellido"
+            name="lastName"
+            errors={errors}
+            register={register}
+          />
         </div>
-        <label htmlFor="email">
-          Email
-          <input type="text" {...register("email", { required: true })} id="email" />
-          <p>{errors.email?.message}</p>
-        </label>
-        <label htmlFor="message">
-          Mensaje
-          <textarea {...register("message", { required: true })} id="message" cols={30} rows={10} />
-          <p>{errors.message?.message}</p>
-        </label>
-        <input type="submit" />
+        <FormInput 
+            required={true}
+            label="Email"
+            name="email"
+            errors={errors}
+            register={register}
+          />
+        <FormTextArea 
+          name="message"
+          register={register}
+          errors={errors}
+          label="Mensaje"
+          required={true}
+        />
+        <button type="submit" disabled={itsDisambled} className="w-full disabled:bg-[#ccc] disabled:cursor-not-allowed bg-[#7f56d9] rounded-md h-10 text-white">
+          {
+            itsLoading === !false ? <ClipLoader color={"white"} loading={true} cssOverride={override}/>: "Enviar mensaje" 
+          }
+        </button>
       </form>
     </div>
   )

@@ -8,18 +8,18 @@ import iPhoneMockup from "@assets/iphone.svg";
 import ScreenMockuo from "@assets/screenMock.svg";
 ---
 <SectionsContainer>
-  <div class="featureTitle">
+  <div class="">
     <SectionHeader
 			heading="Funciones de vanguardia para el analisis de tus proyectos."
 			subheading="Caracteristicas"
 			text="El analisis de tus proyectos a solo unos clicks, no esperes mas y solicita tu demo, te guiamos en todo el proceso."
 		/>
   </div>
-  <div class="imgContainer">
-    <Image src={iPhoneMockup} alt="iphone with dashbord img" class="mobile"/>
-    <Image src={ScreenMockuo} alt="dashboard desktop" class="desktop"/>
+  <div class="flex justify-center items-center pl-6">
+    <Image src={iPhoneMockup} alt="iphone with dashbord img" class="md:hidden"/>
+    <Image src={ScreenMockuo} alt="dashboard desktop" class="hidden md:block"/>
   </div>
-  <div class="featuresContainer">
+  <div class="flex flex-col justify-center gap-10 md:flex-row md:flex-wrap md:gap-20 lg:gap-12">
     { featuresData2.map((data) => {
         return <FeatureCard
           iconName={data.iconName}
@@ -30,53 +30,3 @@ import ScreenMockuo from "@assets/screenMock.svg";
     }
   </div>
 </SectionsContainer>
-<style>
-  .desktop {
-    display: none;
-  }
-
-  .imgContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 1.5rem;
-  }
-
-  .featuresContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .featureTitle {
-    width: 70%
-  }
-
-  @media (min-width: 768px) {
-    .featuresContainer {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 80px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .desktop {
-      display: block;
-    }
-
-    .mobile {
-      display: none;
-    }
-
-    .featuresContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 50px;
-    }
-  }
-</style>

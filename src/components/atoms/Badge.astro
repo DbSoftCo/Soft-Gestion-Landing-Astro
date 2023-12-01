@@ -6,17 +6,11 @@ interface Props {
 const { text } = Astro.props;
 ---
 
-<div class="badge">
+<div class="badge bg-white flex flex-row text-xs rounded-2xl px-1 py-2">
   {text}
 </div>
 <style>
-  .badge {
+  .main-color {
     color: var(--main-color);
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    font-size:12px;
-    border-radius: 16px;
-    padding: 2px 8px 2px 8px;
   }
 </style>
