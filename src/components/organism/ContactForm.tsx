@@ -29,7 +29,7 @@ const schema = yup
   .required()
 
 export const ContactForm = () => {
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyd4ZvQSc7X3nptV-9y1UChb7gHa1fckMRKXB-c8IZzpG-ZQmLCtihcheTJTD2wg-WP1Q/exec";
+  const FORM_ENDPOINT = "https://herniselacome.zeabur.app/api/uploadForm/constructionContactTable";
 
   const {
     register,
@@ -49,7 +49,7 @@ export const ContactForm = () => {
 
     setLoading(true)
 
-    axios.post(scriptURL, getValues())
+    axios.post(FORM_ENDPOINT, getValues(), { headers: { "Access-Control-Allow-Origin": "*" } })
       .then(() => {
         swal({
           title: `Gracias ${getValues().name}`,
@@ -57,12 +57,14 @@ export const ContactForm = () => {
           icon: "success",
         });
       })
-      .catch(() => {
+      .catch((e) => {
         swal({
           title: "Hubo un problema",
           text: "Intenta nuevamente en otro momento",
           icon: "error",
         });
+
+        console.log(e);
       })
       .finally(() => {
         setLoading(false)
