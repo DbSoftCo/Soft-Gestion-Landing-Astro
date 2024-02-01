@@ -14,6 +14,9 @@ export default defineConfig({
   },
   output: "server",
   adapter: vercel({
-    // imageService: true,
+    imageService: true,
+    webAnalytics: {
+      enabled: true,
+    },
   })
 });
