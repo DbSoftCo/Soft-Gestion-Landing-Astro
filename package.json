@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^3.3.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@vercel/analytics": "^1.1.2",
     "astro": "^3.0.8",
     "astro-icon": "^0.8.1",
     "axios": "^1.6.2",
