@@ -16,8 +16,8 @@ export default function FeaturesReact() {
   return (
     <section className="bg-purple-200 w-full pt-4 rounded-md h-fit">
       <Tabs defaultValue={ featuresData1[0].featureTitle } className="w-full rounded-none h-fit flex flex-col items-center justify-center gap-2">
-        <ScrollArea className="w-full whitespace-nowrap rounded-none border xl:w-fit xl:m-auto border-none h-[10%]">
-          <TabsList className="flex bg-purple-700 w-full rounded-none xl:rounded-lg xl:w-fit">
+        <ScrollArea className="w-full whitespace-nowrap rounded-none border lg:w-fit lg:m-auto border-none h-[10%]">
+          <TabsList className="flex bg-purple-700 w-full rounded-none lg:rounded-lg lg:w-fit">
             {
               featuresData1.map(({ featureTitle }) => {
                 return (
@@ -32,8 +32,8 @@ export default function FeaturesReact() {
           featuresData1.map(({ featureTitle, text }) => {
             return (
               <TabsContent key={id + featureTitle} value={ featureTitle }>
-                  <div className="flex flex-col-reverse xl:flex-row px-6 gap-8 my-8">
-                    <div className="flex flex-col gap-10 ml-9 xl:w-[50%] h-full">
+                  <div className="flex flex-col-reverse lg:flex-row px-6 gap-8 my-8">
+                    <div className="flex flex-col gap-10 ml-9 lg:w-[50%] h-full">
                       <h3 className="w-full text-left">No pierdas el control de tus obras de nuevo!</h3>
                       <span className="text-left text-base font-semibold">{text}</span>
                       <ul className="flex flex-col items-start gap-1 text-base font-semibold text-left">
@@ -42,7 +42,7 @@ export default function FeaturesReact() {
                         <li className="text-left">Verifica los gastos de tus obras y hacia donde son asignado.</li>
                       </ul>
                     </div>
-                    <div className="mx-2 xl:w-[50%] xl:px-10">
+                    <div className="mx-2 lg:w-[50%] lg:px-10">
                     <Carousel opts={{
                       dragFree: true,
                       active: true
