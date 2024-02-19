@@ -12,9 +12,6 @@ export default {
       },
     },
     extend: {
-      screens: {
-        "custom": "1360px"
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
