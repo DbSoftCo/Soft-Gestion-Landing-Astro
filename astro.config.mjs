@@ -6,7 +6,12 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false,
+    })
+  ],
   image: {
     service: {
       entrypoint: 'astro/assets/services/noop'

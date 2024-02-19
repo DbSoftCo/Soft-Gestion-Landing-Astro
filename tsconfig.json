@@ -5,10 +5,7 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@layout/*": ["src/layout/*"],
-      "@pages/*": ["src/pages/*"],
+      "@/*": ["./src/*"]
     },
     "verbatimModuleSyntax": false
   }

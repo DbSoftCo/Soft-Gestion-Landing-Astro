@@ -1,12 +1,9 @@
-import AccordeonElements from "../molecules/Acordeonelements";
+import { useId } from "react"
 import { accordeonData, IaccordeonData } from "./accordeonInfo"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export const FrequentlyAsks = () => {
-  const generateAccordeonElements = (data: IaccordeonData, index: number) => {
-    return <AccordeonElements text={data.text} title={data.title} key={index} />
-  };
-
-  const DATA_LENGHT = accordeonData.length;
+  const key = useId();
 
   return (
     <div className="py-14">
@@ -15,18 +12,20 @@ export const FrequentlyAsks = () => {
           <h3 className="font-semibold text-2xl md:text-4xl">Preguntas frecuentes</h3>
           <p className="font-normal text-base md:text-xl text-[#667085]">Todo lo que necesitas saber sobre nuestros productos.</p>
         </div>
-        <div className="md:px-4 flex flex-col gap-5 md:gap-10 w-full xl:w-4/6">
+        <Accordion type="single" collapsible className="sm:w-4/5">
           {
             accordeonData.map((data, index) => {
               return (
-                <>
-                  { generateAccordeonElements(data, index) }
-                  { index + 1 !== DATA_LENGHT ? <div className="border-[1px] bg-[#ccc]"></div> : <></> }
-                </>
+                  <AccordionItem value={`item-${index}`} key={key}>
+                    <AccordionTrigger className="text-xl sm:text-3xl text-start">{data.title}</AccordionTrigger>
+                    <AccordionContent className="text-sm sm:text-lg text-start">
+                      {data.text}
+                    </AccordionContent>
+                  </AccordionItem>
               )
             })
           }
-        </div>
+        </Accordion>
       </div>
     </div>
   )

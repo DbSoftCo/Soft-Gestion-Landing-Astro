@@ -1,8 +1,8 @@
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import { FormInput } from "@components/atoms/FormInput";
-import { FormTextArea } from "@components/atoms/FormTextArea";
+import { FormInput } from "@/components/atoms/FormInput";
+import { FormTextArea } from "@/components/atoms/FormTextArea";
 import axios from "axios";
 import { CSSProperties, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";

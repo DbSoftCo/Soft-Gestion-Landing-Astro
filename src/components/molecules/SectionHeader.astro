@@ -4,12 +4,12 @@ interface Props {
   subheading: string;
   text: string;
 }
-
+import { Badge } from "@/components/ui/badge"
 const { heading, subheading, text } = Astro.props;
 ---
 
 <div class="flex flex-col gap-4 items-center justify-center md:gap-8">
-  <h5 class="rounded-full bg-[#F9F5FF] px-3">{subheading}</h5>
+  <Badge className="px-3 cursor-default text-base">{subheading}</Badge>
   <h3 class="font-semibold text-2xl md:text-4xl">{heading}</h3>
   <p class="text-center xl:w-[50vw]">{text} + asd</p>
 </div>

@@ -2,6 +2,7 @@
 import SectionsContainer from "../atoms/SectionsContainer.astro";
 import FeatureCard from "../molecules/FeatureCard.astro";
 import SectionHeader from "../molecules/SectionHeader.astro";
+import FeaturesReact from "./FeaturesReact";
 import { featuresData1 } from "./featuresData";
 ---
 
@@ -13,13 +14,5 @@ import { featuresData1 } from "./featuresData";
 			text="Te ayudamos a mantener la gestion total de tu empresa, desde la gestion de proyectos, hasta todo lo relacionado con la administracion de RRHH, controlalos gastos de tu empresa y factura de manera segura!"
 		/>
   </div>
-  <div class="flex flex-col gap-10 md:flex-row md:justify-center md:flex-wrap md:gap-20 xl:gap-[50px]">
-    {featuresData1.map((data) => {
-      return <FeatureCard 
-        text={data.text}
-        iconName={data.iconName}
-        featureTitle={data.featureTitle}
-      />
-    })}
-  </div>
+  <FeaturesReact client:load />
 </SectionsContainer>

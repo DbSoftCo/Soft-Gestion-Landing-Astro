@@ -22,12 +22,12 @@ export const featuresData1: IFeatureData[] = [
   },
   {
     iconName: "carbon:concept",
-    featureTitle: "Modulo de RRHH",
+    featureTitle: "RRHH",
     text: "Nuestro módulo de Recursos Humanos revoluciona la gestión de personal en tu empresa. Automatiza tareas, simplifica procesos y mejora la productividad de tu equipo. Con herramientas intuitivas y cumplimiento normativo, optimiza la gestión de RRHH y potencia el crecimiento de tu negocio. ¡Transforma tu empresa con nuestra solución de RRHH!"
   },
   {
     iconName: "carbon:chat",
-    featureTitle: "Modulo de cuentas corrientes",
+    featureTitle: "Cuentas corrientes",
     text: "Nuestro módulo de cuentas corrientes es la solución perfecta para simplificar y optimizar la gestión de tus cuentas y transacciones. Con funciones intuitivas y una interfaz fácil de usar, podrás llevar un control preciso de tus registros financieros, agilizar el proceso de facturación y mantener un seguimiento eficiente de los saldos."
   },
   {
