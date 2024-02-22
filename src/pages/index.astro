@@ -6,9 +6,11 @@ import Features from '../components/organism/Features.astro';
 import FeaturesTwo from '../components/organism/FeaturesTwo.astro';
 import { FrequentlyAsks } from "../components/organism/FrequentlyAsks"
 import { ContactForm } from '@/components/organism/ContactForm';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <Layout title="DbSoft Co">
+	<SpeedInsights/>
 	<main class="w-full flex flex-col items-center">
 		<div class="lg:w-3/4 w-[90%] mt-16">
 			<HeadingBadgeAndButtons 
