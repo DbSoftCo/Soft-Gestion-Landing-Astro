@@ -4,8 +4,8 @@ import SectionsContainer from "../atoms/SectionsContainer.astro";
 import FeatureCard from "../molecules/FeatureCard.astro";
 import SectionHeader from "../molecules/SectionHeader.astro";
 import { featuresData2 } from "./featuresData";
-import iPhoneMockup from "@/assets/iphone.svg";
-import ScreenMockuo from "@/assets/screenMock.svg";
+import iPhoneMockup from "@/assets/iphone.webp";
+import ScreenMockup from "@/assets/screenMock.webp";
 ---
 <SectionsContainer>
   <div class="">
@@ -17,7 +17,7 @@ import ScreenMockuo from "@/assets/screenMock.svg";
   </div>
   <div class="flex justify-center items-center pl-6">
     <Image src={iPhoneMockup} alt="iphone with dashbord img" class="md:hidden"/>
-    <Image src={ScreenMockuo} alt="dashboard desktop" class="hidden md:block"/>
+    <Image src={ScreenMockup} alt="dashboard desktop" class="hidden md:block"/>
   </div>
   <div class="flex flex-col justify-center gap-10 md:flex-row md:flex-wrap md:gap-20 lg:gap-12">
     { featuresData2.map((data) => {

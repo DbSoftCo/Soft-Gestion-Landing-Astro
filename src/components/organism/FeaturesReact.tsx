@@ -55,10 +55,10 @@ export default function FeaturesReact() {
                     >
                       <CarouselContent>
                         <CarouselItem>
-                          <img src="Dashboard_general_obras.jpg" alt="test" className="rounded-lg object-fill"/>
+                          <img src="Dashboard_general_obras.webp" alt="test" className="rounded-lg object-fill"/>
                         </CarouselItem>
                         <CarouselItem>
-                          <img src="Dashboard_general_obras.jpg" alt="test" className="rounded-lg object-fill"/>
+                          <img src="Dashboard_general_obras.webp" alt="test" className="rounded-lg object-fill"/>
                         </CarouselItem>
                       </CarouselContent>
                     </Carousel>
